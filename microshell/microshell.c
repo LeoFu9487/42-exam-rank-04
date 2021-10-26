@@ -59,8 +59,9 @@ void	cmd_push_back(char *str)
 	if (!cmd) cmd = new;
 	else
 	{
-		while (cmd->next) cmd = cmd->next;
-		cmd->next = new;
+		t_list *tmp = cmd;
+		while (tmp->next) tmp = tmp->next;
+		tmp->next = new;
 	}
 }
 
